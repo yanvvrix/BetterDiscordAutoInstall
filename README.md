@@ -11,18 +11,31 @@ Execution Sequence:
 4. Silent Injection: It calls your pre-configured official executable (bdcli.exe) located at BetterDiscordAutoInstaller\bdcli\bdcli.exe. It passes the install --channel stable --silent arguments to apply the patch without triggering interactive user prompts or freezing.
 5. Seamless Relaunch: Once the injection is completed successfully, it boots up the official Discord launcher (Update.exe), opening your Discord with all your themes and plugins restored.
 
-How to Add It to Windows Startup (Automation Guide)
+## How to Add to Windows Startup (Automation Guide)
 
-To make this program automatically monitor and fix BetterDiscord every time you turn on your PC, you should register it via Windows Task Scheduler. This method runs the application faster than the traditional "Startup" folder and keeps it completely invisible.
+To make this program automatically monitor and fix BetterDiscord every time you turn on your PC, you should register it via the **Windows Task Scheduler**. This method runs the application faster than the traditional "Startup" folder and keeps it completely invisible.
 
-1. Press Win + R on your keyboard, type taskschd.msc, and hit Enter to open the Task Scheduler.
-2. In the right-hand panel ("Actions"), click on "Create Basic Task...".
-3. Name: Enter a clear name, for example: Auto BetterDiscord Repair. Click Next.
-4. Trigger: Select "When I log on". This ensures the tool executes right when your desktop environment loads. Click Next.
-5. Action: Select "Start a program". Click Next.
-6. Program/script: Click "Browse..." and select your compiled .exe file.
-7. Start in (Optional): Copy and paste the absolute path of the folder where your .exe file resides (e.g., D:\BetterDiscordAutoInstaller\). This prevents path-resolution issues. Click Next.
-8. Click "Finish" to save your task.
+Choose **one** of the two methods below to set it up:
+
+### Method 1: The One-Click Script (Recommended)
+1. Make sure your compiled `AutoInstallBetterDiscord.exe` and the `bdcli` folder are in their permanent directory (e.g., `D:\BetterDiscordAutoInstaller\`).
+2. Place the `install_task.bat` file right next to your `.exe`.
+3. Simply **double-click** on `install_task.bat`. Click **Yes** when the Windows prompt asks for Administrator permissions.
+4. A console window will confirm that the task was successfully created. You're done!
+
+---
+
+### Method 2: Manual Step-by-Step Setup
+If you prefer to configure it manually through the Windows interface, follow these steps:
+
+1. Press **`Win + R`** on your keyboard, type **`taskschd.msc`**, and hit **Enter** to open the Task Scheduler.
+2. In the right-hand panel ("Actions"), click on **"Create Basic Task..."**.
+3. **Name**: Enter a clear name, for example: `Auto BetterDiscord Repair`. Click **Next**.
+4. **Trigger**: Select **"When I log on"**. This ensures the tool executes right when your desktop environment loads. Click **Next**.
+5. **Action**: Select **"Start a program"**. Click **Next**.
+6. **Program/script**: Click **"Browse..."** and select your compiled `AutoInstallBetterDiscord.exe` file.
+7. **Start in (Optional)**: Copy and paste the absolute path of the folder where your `.exe` file resides (e.g., `D:\BetterDiscordAutoInstaller\`). This prevents path-resolution issues. Click **Next**.
+8. Click **"Finish"** to save your task.
 
 Verify Background Operation:
 You can test the setup immediately without restarting your PC:
