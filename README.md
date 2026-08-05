@@ -1,35 +1,25 @@
-# BetterDiscord Auto Installer & Repair Tool
+# BetterDiscord Auto Installer
 
-A small C# utility that automatically checks whether **BetterDiscord** is still installed after Discord updates. If Discord removes the injection during an update, the tool silently reinstalls it and launches Discord again. If everything is already working, it simply exits without doing anything.
+Never reinstall BetterDiscord manually after a Discord update again.
 
----
+This lightweight utility automatically checks whether BetterDiscord is still installed whenever you sign in to Windows. If Discord has removed the injection during an update, the tool silently reinstalls BetterDiscord and launches Discord for you. If everything is already installed, it exits immediately without interrupting Discord.
 
-# How It Works
+## Features
 
-The program runs quietly in the background and follows these steps:
+- Automatically detects the latest Discord installation.
+- Checks whether BetterDiscord is already installed.
+- Reinstalls BetterDiscord only when necessary.
+- Launches Discord after a successful repair.
+- Runs silently in the background.
+- One-click installation with `install_task.bat`.
+- Easy removal with `uninstall_task.bat`.
+- No manual Task Scheduler configuration required.
 
-1. **Finds your Discord installation**
-   - It scans your local `AppData` folder and automatically detects the newest installed version of Discord (for example, `app-1.0.9251`).
+## Why use it?
 
-2. **Checks if BetterDiscord is installed**
-   - The tool reads Discord's internal `index.js` file.
-   - If BetterDiscord is already present, the program exits immediately.
-   - If it isn't found (usually after a Discord update), the repair process begins.
+If you use BetterDiscord every day, you've probably experienced Discord updates removing it unexpectedly. Normally, you'd have to open the installer and patch Discord again yourself.
 
-3. **Closes Discord**
-   - Any running Discord processes are terminated using `taskkill` to make sure no files are locked.
-   - The program waits briefly before continuing.
-
-4. **Reinstalls BetterDiscord**
-   - It runs the included `bdcli.exe` (`bdcli\bdcli.exe`) with the following arguments:
-     ```
-     install --channel stable --silent
-     ```
-   - The installation is performed silently without requiring user interaction.
-
-5. **Starts Discord**
-   - Once the installation is complete, Discord is launched normally using `Update.exe`.
-   - Your BetterDiscord plugins and themes should be available again.
+This tool automates that process. Once it's set up, it quietly checks your installation every time you log in. If BetterDiscord is still there, nothing happens. If it was removed by a Discord update, the tool restores it automatically so Discord is ready to use without any extra steps.
 
 ---
 
