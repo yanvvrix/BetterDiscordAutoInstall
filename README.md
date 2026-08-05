@@ -23,7 +23,7 @@ To automatically check BetterDiscord every time you sign in, register the progra
 
 ## Method 1 (Recommended)
 
-1. Place `AutoInstallBetterDiscord` folder in a permanent location (for example, `D:\BetterDiscordAutoInstaller\`).
+1. Place `BetterDiscordAutoInstaller` folder in a permanent location (for example, `D:\BetterDiscordAutoInstaller\`).
 2. Double-click `install_task.bat`.
 3. Approve the UAC prompt if Windows asks.
 4. The scheduled task will be created automatically.
