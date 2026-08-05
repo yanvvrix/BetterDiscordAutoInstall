@@ -42,7 +42,7 @@ If you prefer to configure it manually through the Windows graphic interface, fo
 4. **Trigger:** Select **"When I log on"**. This ensures the tool executes right when your desktop environment loads. Click **Next**.
 5. **Action:** Select **"Start a program"**. Click **Next**.
 6. **Program/script:** Click **"Browse..."** and select your compiled `AutoInstallBetterDiscord.exe` file.
-7. **Start in (Optional):** Copy and paste the absolute path of the folder where your `.exe` file resides (e.g., `D:\BetterDiscordAutoInstaller\`). *This is highly recommended to prevent path-resolution issues.* Click **Next**.
+7. **Start in (Optional):** Copy and paste path of the folder where your `.exe` file resides (e.g., `D:\BetterDiscordAutoInstaller\`). *This is highly recommended to prevent path-resolution issues.* Click **Next**.
 8. Click **"Finish"** to save your task.
 
 ---
@@ -52,7 +52,7 @@ If you prefer to configure it manually through the Windows graphic interface, fo
 You can test the setup immediately without restarting your PC to ensure everything is running perfectly:
 
 1. Open the Task Scheduler (`taskschd.msc`).
-2. Find your new **"Auto BetterDiscord Repair"** task in the center list.
+2. Find new **"Auto BetterDiscord Repair"** task in the center list.
 3. Right-click it and choose **"Run"**.
 
 The application will seamlessly audit your Discord directories in the background. If your BetterDiscord patch is intact, you won't see any blinking windows, and your active Discord window won't even flinch.
