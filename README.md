@@ -1,4 +1,4 @@
-# BetterDiscord Auto Repair
+# BetterDiscord Auto Install
 
 A small utility that automatically restores BetterDiscord after Discord updates.
 
